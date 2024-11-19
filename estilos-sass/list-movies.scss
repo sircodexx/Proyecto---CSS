@@ -1,0 +1,271 @@
+// Importar fuente
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+// Variables
+$primary-color: #e50914; // Rojo Netflix
+$secondary-color: #221f1f; // Negro Netflix
+$background-gradient: linear-gradient(360deg, #141414 0%, #000000 100%);
+$font-family: 'Poppins', sans-serif;
+$button-hover-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+
+// Fondo general
+body {
+    background: $background-gradient;
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    overflow-x: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+// Contenedor principal
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+// Encabezado
+h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 25px;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    animation: slideIn 1s ease-in-out;
+}
+
+// Filtros
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+// Etiquetas
+.form-label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #a8dadc;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+// Select
+.form-select {
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    padding: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    animation: fadeIn 1.5s ease-in-out;
+
+    &:focus {
+        border-color: #457b9d;
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0px 0px 8px rgba(69, 123, 157, 0.8);
+        color: #ffffff;
+    }
+
+    option {
+        background: rgba(0, 0, 0, 0.8);
+        color: #ffffff;
+    }
+}
+
+// Tarjetas de películas
+.movie-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    animation: fadeIn 2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .movie-card-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    .movie-card-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+        margin: 5px 0;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    .btn-primary {
+        background-color: $primary-color;
+        border: none;
+        border-radius: 10px;
+        font-size: 0.9rem;
+        padding: 5px 10px;
+        margin: 5px;
+        transition: all 0.3s ease;
+        animation: fadeIn 2s ease-in-out;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+
+    .btn-danger {
+        background-color: #e63946;
+        border: none;
+        border-radius: 10px;
+        font-size: 0.9rem;
+        padding: 5px 10px;
+        margin: 5px;
+        transition: all 0.3s ease;
+        animation: fadeIn 2s ease-in-out;
+
+        &:hover {
+            background-color: #c53030;
+        }
+    }
+}
+
+// Modal estilo
+.modal-content {
+    background: #264c64;
+    color: #ffffff;
+    border-radius: 15px;
+    animation: fadeIn 2s ease-in-out;
+
+    .modal-header, .modal-footer {
+        border: none;
+    }
+
+    .modal-body {
+        font-size: 1rem;
+        line-height: 1.5;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+// Animaciones
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+// Responsividad
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    form {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-primary, .btn-danger {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    .movie-card-img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .movie-card-title {
+        font-size: 1rem;
+    }
+}
+
+// Footer
+footer {
+    background: #1b2a38;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .social-icons {
+            margin-top: 10px;
+
+            a {
+                color: #ffffff;
+                margin: 0 10px;
+                font-size: 1.5rem;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .footer-brand {
+        color: #ff7e5f;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+body {
+  background: linear-gradient(360deg, #141414 0%, #000000 100%);
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-container {
+  text-align: center;
+  margin-top: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.welcome-text {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 1s ease-out;
+  color: #e5e5e5;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 768px) {
+  .welcome-text {
+    font-size: 2.5rem;
+  }
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 90%;
+}
+
+.btn {
+  flex: 1;
+  max-width: 300px;
+  height: 180px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: slideUp 1s ease-out forwards;
+  position: relative;
+  overflow: hidden;
+  background: #221f1f;
+  text-align: center;
+}
+.btn i {
+  font-size: 3rem;
+  transition: opacity 0.3s ease;
+}
+.btn span {
+  display: none;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.btn:hover i {
+  opacity: 0;
+  display: none;
+}
+.btn:hover span {
+  display: block;
+  opacity: 1;
+}
+.btn.btn-green {
+  background: #e50914;
+}
+.btn.btn-green:hover {
+  background: rgb(179.9285714286, 7.0714285714, 15.7142857143);
+}
+.btn.btn-blue {
+  background: rgb(60.6769230769, 55.3230769231, 55.3230769231);
+}
+.btn.btn-blue:hover {
+  background: rgb(87.3538461538, 79.6461538462, 79.6461538462);
+}
+.btn.btn-red {
+  background: #e50914;
+}
+.btn.btn-red:hover {
+  background: rgb(179.9285714286, 7.0714285714, 15.7142857143);
+}
+
+.ripple {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: rippleEffect 0.6s ease-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes rippleEffect {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+footer {
+  background: #141414;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .footer-content .social-icons {
+  margin-top: 10px;
+}
+footer .footer-content .social-icons a {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+footer .footer-content .social-icons a:hover {
+  color: #e50914;
+}
+footer .footer-brand {
+  color: #e50914;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=dashboard.css.map */

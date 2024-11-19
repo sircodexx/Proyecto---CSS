@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+body {
+  background: linear-gradient(135deg, #141414 0%, #000000 100%);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.login-card {
+  background: rgba(0, 0, 0, 0.75);
+  border: none;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 1s ease-out;
+}
+.login-card h1 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #333;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-primary {
+  background: #e50914;
+  border: none;
+  font-size: 1rem;
+  padding: 0.75rem;
+  width: 100%;
+  margin-top: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.btn-primary:hover {
+  background: rgb(179.9285714286, 7.0714285714, 15.7142857143);
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+a {
+  color: #e50914;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: rgb(246.6428571429, 42.3571428571, 52.5714285714);
+}
+
+.text-center {
+  color: #fff;
+}
+
+.success-alert {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+  border: 1px solid #4caf50;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  .login-card {
+    padding: 1.5rem;
+  }
+  .form-control {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+  .btn-primary {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+  .login-card h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

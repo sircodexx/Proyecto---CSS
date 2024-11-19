@@ -1,0 +1,187 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+body {
+  background: linear-gradient(360deg, #141414 0%, #000000 100%);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 700px;
+  margin: 30px auto;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 25px;
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #a8dadc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.form-control:focus {
+  border-color: #457b9d;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 8px rgba(69, 123, 157, 0.8);
+  color: #ffffff;
+}
+
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.custom-select .form-select {
+  appearance: none;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.custom-select .form-select:focus {
+  border-color: #457b9d;
+  box-shadow: 0px 0px 8px rgba(69, 123, 157, 0.8);
+  outline: none;
+}
+.custom-select .form-select option {
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  padding: 10px;
+}
+.custom-select .form-select option:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.custom-select::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  color: #ffffff;
+  pointer-events: none;
+}
+
+.btn-form {
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+.btn-form.btn-primary {
+  background-color: #e50914;
+  color: #ffffff;
+  border: none;
+}
+.btn-form.btn-primary:hover {
+  background-color: rgb(179.9285714286, 7.0714285714, 15.7142857143);
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+}
+.btn-form.btn-secondary {
+  background-color: #e63946;
+  color: #ffffff;
+  border: none;
+  margin-top: -10px;
+}
+.btn-form.btn-secondary:hover {
+  background-color: #c53030;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  color: #000;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .container {
+    padding: 20px;
+    margin: 10px;
+  }
+  .btn-form {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+footer {
+  background: #1b2a38;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+footer .footer-brand {
+  color: #ff7e5f;
+  font-weight: bold;
+}
+footer .social-icons {
+  margin-top: 10px;
+}
+footer .social-icons a {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+footer .social-icons a:hover {
+  color: #e50914;
+}
+
+/*# sourceMappingURL=register_movie.css.map */

@@ -1,0 +1,138 @@
+// Importar fuente
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+// Variables
+$primary-color: #e50914; // Rojo Netflix
+$secondary-color: #221f1f; // Negro Netflix
+$background-gradient: linear-gradient(135deg, #141414 0%, #000000 100%);
+$font-family: 'Poppins', sans-serif;
+$button-hover-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+
+// Fondo general
+body {
+    background: $background-gradient;
+    color: #fff;
+    font-family: $font-family;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+// Estilo de la tarjeta de login
+.login-card {
+    background: rgba(0, 0, 0, 0.75);
+    border: none;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 1s ease-out;
+
+    h1 {
+        color: #ffffff;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+}
+
+// Estilo de los inputs
+.form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #333;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+
+    &:focus {
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        outline: none;
+        box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+    }
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+// Estilo del botón
+.btn-primary {
+    background: $primary-color;
+    border: none;
+    font-size: 1rem;
+    padding: 0.75rem;
+    width: 100%;
+    margin-top: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+        background: darken($primary-color, 10%);
+        transform: scale(1.05);
+        box-shadow: $button-hover-shadow;
+    }
+}
+
+// Estilo de enlaces
+a {
+    color: $primary-color;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: lighten($primary-color, 10%);
+    }
+}
+
+// Texto centrado
+.text-center {
+    color: #fff;
+}
+
+// Alerta de éxito
+.success-alert {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+    border: 1px solid #4caf50;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out;
+}
+
+// Animaciones
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+// Responsividad
+@media (max-width: 768px) {
+    .login-card {
+        padding: 1.5rem;
+    }
+
+    .form-control {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .btn-primary {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .login-card h1 {
+        font-size: 1.5rem;
+    }
+}
